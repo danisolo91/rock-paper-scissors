@@ -13,7 +13,6 @@
             }
 
             function playRound(playerSelection, computerSelection) {
-                playerSelection = playerSelection.toLowerCase();
 
                 let result = '';
 
@@ -56,7 +55,7 @@
                 let computerScore = 0;
 
                 for(let i = 1; i <= 5; i++) {
-                    const playerSelection = prompt("Write your selection (rock, paper, scissors):");
+                    const playerSelection = prompt("Write your selection (rock, paper, scissors):")?.toLowerCase();
                     const computerSelection = computerPlay();
 
                     let roundResult = playRound(playerSelection, computerSelection);
