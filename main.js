@@ -25,7 +25,7 @@ restartButton.addEventListener('click', (e) => {
 });
 
 let gameResult = document.createElement('p');
-gameResult.style.fontWeight = 'bold';
+gameResult.style.cssText = 'font-weight: bold; font-size: 1.25rem';
 
 let playerOptionsDiv = document.querySelector('#player-options');
 let playerSelectionDiv = document.querySelector('#player>.selection');
@@ -73,8 +73,6 @@ buttons.forEach(button => {
                 gameResult.textContent = "Congratulations! You've won.";
             } else if (playerScore < computerScore) {
                 gameResult.textContent = "Computer wins!";
-            } else {
-                gameResult.textContent = "Tie! Nobody wins.";
             }
         
             roundContentDiv.appendChild(gameResult);
